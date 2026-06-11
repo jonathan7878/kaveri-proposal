@@ -1,0 +1,40 @@
+/* ============================================================
+   Technical Hub × Nagarjuna College of Engineering & Technology
+   Palette override modelled on ncet.co.in (deep navy + orange)
+   Loaded AFTER style.css — only overrides what changes.
+   ============================================================ */
+
+:root {
+  --navy: #0a1f44;        /* NCET deep navy */
+  --navy-dark: #061229;
+  --navy-700: #143263;
+  --accent: #f6872a;      /* NCET orange */
+  --accent-dark: #d96f15;
+  --shadow: 0 12px 34px rgba(10, 31, 68, .12);
+  --shadow-sm: 0 6px 18px rgba(10, 31, 68, .09);
+}
+
+/* Brand lockup in navbar / footer — NCET logo runs a touch larger */
+.brand-logo-ncet { height: 46px; }
+.footer-logo-ncet { height: 60px; }
+
+@media (max-width: 1199px) { .brand-logo-ncet { height: 40px; } }
+@media (max-width: 575px)  { .brand-logo-ncet { height: 34px; } }
+
+/* The NCET logo sits on white, so give the footer lockup a clean plate */
+.footer-logo-ncet {
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* Two-column track cards (labs / curriculum) reuse course-card styling */
+.track-card { height: 100%; }
+.track-card .course-num { color: rgba(246, 135, 42, .25); }
+
+/* Pillars strip (replaces the numeric stats strip — no invented figures) */
+.pillars-strip { background: linear-gradient(90deg, var(--accent), var(--accent-dark)); color: #fff; padding: 2.2rem 0; }
+.pillar { display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center; }
+.pillar i { font-size: 1.9rem; }
+.pillar .pillar-label { font-family: 'Poppins', system-ui, sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.25; }
+.pillar .pillar-sub { font-size: .82rem; opacity: .92; }
