@@ -75,4 +75,20 @@
   } else {
     counters.forEach(animateCount);
   }
+
+  // Pause a results-carousel's auto-rotation while its video slide is playing
+  document.querySelectorAll('.results-carousel video').forEach(function (video) {
+    var carouselEl = video.closest('.carousel');
+    if (!carouselEl) return;
+    video.addEventListener('play', function () {
+      var instance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+      instance.pause();
+    });
+    ['pause', 'ended'].forEach(function (evt) {
+      video.addEventListener(evt, function () {
+        var instance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+        instance.cycle();
+      });
+    });
+  });
 })();
