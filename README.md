@@ -1,47 +1,39 @@
-# Technical Hub × Aditya University — Claude AI Success Story
+# Technical Hub × Kaveri University — Digital Presence Proposal
 
-A static, single-page website presenting the success story *"How Technical Hub Transformed
-Productivity at Aditya University with Claude AI."* The design is modelled on
-[adityauniversity.in](https://www.adityauniversity.in/) (navy-blue + orange palette,
-Poppins/Open Sans typography, Bootstrap responsive layout).
+A static, single-page proposal site pitching Technical Hub's branding, digital marketing,
+and T@G Portal services to Kaveri University. It opens with a connecting story — 10+ years
+of experience, proven across Aditya University, Torii Minds, and the Nagarjuna Group of
+Institutions — before walking through the full service offering and a dedicated T@G Portal
+walkthrough.
 
 ## Tech stack
-Same family as the reference site — a static, responsive HTML/CSS/JS build:
+A static, responsive HTML/CSS/JS build:
 
 - **HTML5** — semantic single-page layout
-- **Bootstrap 5.3** (CDN) — responsive grid, navbar, utilities
+- **Bootstrap 5.3** (CDN) — responsive grid, navbar, carousels, utilities
 - **Bootstrap Icons** (CDN)
 - **Google Fonts** — Poppins (headings) + Open Sans (body)
 - **Vanilla JavaScript** — scroll-reveal, animated stat counters, sticky-nav, back-to-top
+- Embedded, privacy-enhanced YouTube videos for proof-of-work
 
-No build step or server required — it's fully static.
+No build step required — it's fully static.
 
 ## Structure
 ```
-technical-hub-claude-site/
-├── index.html        # all content sections
-├── css/style.css     # custom theme (Aditya palette)
-├── js/main.js         # interactivity
-└── assets/            # drop event photos here (see below)
+index.html     # all content sections
+style.css      # theme (Technical Hub navy/orange + five service accents)
+main.js        # interactivity
+assets/        # logos, case-study creatives, and work-sample photos
 ```
 
 ## Sections
-Hero · Stats · Executive Summary · Faculty Development Programs · Project Space Hackathon
-· Claude Incentives · Project Specification Application (platform) · Results & Outlook · Contact · Footer
+Hero · Stats · Proven Results (Aditya University, Torii Minds, Nagarjuna Group of
+Institutions) · Video Work · Services · T@G Portal · Why Partner With Us · Benefits ·
+CTA · Footer
 
 ## Run it
-Just open `index.html` in any browser, or serve the folder:
+Open `index.html` directly in a browser, or serve the folder:
 ```powershell
-python -m http.server 8000   # then visit http://localhost:8000
+python -m http.server 8743   # then visit http://localhost:8743
 ```
-
-## Adding the real photos
-The case-study images currently render as styled placeholders. To use the real event
-photos from the PDF, save them into `assets/` and replace a placeholder block, e.g.:
-
-```html
-<!-- replace this -->
-<div class="image-placeholder"><i class="bi bi-easel2-fill"></i><span>Faculty Development Workshop</span></div>
-<!-- with -->
-<img src="assets/fdp.jpg" alt="Faculty Development Workshop" class="img-fluid" />
-```
+A `.claude/launch.json` is included so the site also previews automatically inside Claude Code.
